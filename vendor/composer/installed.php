@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '82ad3b3ccf090d291eb2913935e364a6f3f88e98',
+        'reference' => '04399f82bebd34f7c5bd31a005bee1cc5b40548f',
         'name' => 'saro0h/to-do-list',
         'dev' => true,
     ),
@@ -296,7 +296,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '82ad3b3ccf090d291eb2913935e364a6f3f88e98',
+            'reference' => '04399f82bebd34f7c5bd31a005bee1cc5b40548f',
             'dev_requirement' => false,
         ),
         'sensio/distribution-bundle' => array(
