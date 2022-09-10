@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '5ef00912139daa010cf07ce018c5dfba399b0e34',
+        'reference' => '0582e3e2eb72aff38459940f70ab4f6f119cc751',
         'name' => 'saro0h/to-do-list',
         'dev' => true,
     ),
@@ -386,7 +386,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '5ef00912139daa010cf07ce018c5dfba399b0e34',
+            'reference' => '0582e3e2eb72aff38459940f70ab4f6f119cc751',
             'dev_requirement' => false,
         ),
         'sebastian/cli-parser' => array(
@@ -792,12 +792,12 @@
             ),
         ),
         'symfony/phpunit-bridge' => array(
-            'pretty_version' => 'v3.4.47',
-            'version' => '3.4.47.0',
+            'pretty_version' => 'v6.1.3',
+            'version' => '6.1.3.0',
             'type' => 'symfony-bridge',
             'install_path' => __DIR__ . '/../symfony/phpunit-bridge',
             'aliases' => array(),
-            'reference' => '120273ad5d03a8deee08ca9260e2598f288f2bac',
+            'reference' => '75c2fa71d049c1f48e39d208c0cefba97e66335a',
             'dev_requirement' => true,
         ),
         'symfony/polyfill-apcu' => array(
