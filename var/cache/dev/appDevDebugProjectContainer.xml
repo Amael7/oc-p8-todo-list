@@ -812,7 +812,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>HV7AGvVbaY1nK1edlA844r</argument>
+      <argument>yCCI7giT72catzUZls+PPd</argument>
       <argument>/Users/stephanemontoro/code/Amael7/OpenClassrooms/oc-p8-todo-list/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -822,7 +822,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>HV7AGvVbaY1nK1edlA844r</argument>
+      <argument>yCCI7giT72catzUZls+PPd</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -2622,12 +2622,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>631b6ac5a13900.18465343</argument>
+      <argument>631c6399160a83.92466244</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>631b6ac5a13900.18465343</argument>
+      <argument>631c6399160a83.92466244</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -4060,7 +4060,7 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <argument>Fe0QwES074</argument>
       <argument>0</argument>
-      <argument>HV7AGvVbaY1nK1edlA844r</argument>
+      <argument>yCCI7giT72catzUZls+PPd</argument>
       <argument>/Users/stephanemontoro/code/Amael7/OpenClassrooms/oc-p8-todo-list/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4068,7 +4068,7 @@
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <argument>Z4OUCWG63m</argument>
       <argument>0</argument>
-      <argument>HV7AGvVbaY1nK1edlA844r</argument>
+      <argument>yCCI7giT72catzUZls+PPd</argument>
       <argument>/Users/stephanemontoro/code/Amael7/OpenClassrooms/oc-p8-todo-list/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4076,7 +4076,7 @@
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <argument>FSAvhOqzFE</argument>
       <argument>0</argument>
-      <argument>HV7AGvVbaY1nK1edlA844r</argument>
+      <argument>yCCI7giT72catzUZls+PPd</argument>
       <argument>/Users/stephanemontoro/code/Amael7/OpenClassrooms/oc-p8-todo-list/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4084,7 +4084,7 @@
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <argument>gaJaFkkt6i</argument>
       <argument>0</argument>
-      <argument>HV7AGvVbaY1nK1edlA844r</argument>
+      <argument>yCCI7giT72catzUZls+PPd</argument>
       <argument>/Users/stephanemontoro/code/Amael7/OpenClassrooms/oc-p8-todo-list/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
