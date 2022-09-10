@@ -1,5 +1,6 @@
 
 .DS_Store
+var/cache/test/
 var/cache/dev/
 var/logs/dev.log
 var/sessions/dev/
