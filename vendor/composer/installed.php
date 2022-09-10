@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'f9cb6d3cdef51e74ba9c0851032821f17ab48119',
+        'reference' => '4c3dfbe64aadecf66b3e0438c1888b4c21c50c46',
         'name' => 'saro0h/to-do-list',
         'dev' => true,
     ),
@@ -395,7 +395,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'f9cb6d3cdef51e74ba9c0851032821f17ab48119',
+            'reference' => '4c3dfbe64aadecf66b3e0438c1888b4c21c50c46',
             'dev_requirement' => false,
         ),
         'sebastian/comparator' => array(
