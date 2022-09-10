@@ -78,3 +78,7 @@
 [2022-09-10 12:05:43] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
 [2022-09-10 12:05:43] security.DEBUG: Access denied, the user is not fully authenticated; redirecting to authentication entry point. {"exception":"[object] (Symfony\\Component\\Security\\Core\\Exception\\AccessDeniedException(code: 403): Access Denied. at /Users/stephanemontoro/code/Amael7/OpenClassrooms/oc-p8-todo-list/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Firewall/AccessListener.php:68)"} []
 [2022-09-10 12:05:43] security.DEBUG: Calling Authentication entry point. [] []
+[2022-09-10 12:30:39] request.INFO: Matched route "homepage". {"route":"homepage","route_parameters":{"_controller":"AppBundle\\Controller\\DefaultController::indexAction","_route":"homepage"},"request_uri":"http://localhost/","method":"GET"} []
+[2022-09-10 12:30:39] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
+[2022-09-10 12:30:39] security.DEBUG: Access denied, the user is not fully authenticated; redirecting to authentication entry point. {"exception":"[object] (Symfony\\Component\\Security\\Core\\Exception\\AccessDeniedException(code: 403): Access Denied. at /Users/stephanemontoro/code/Amael7/OpenClassrooms/oc-p8-todo-list/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Firewall/AccessListener.php:68)"} []
+[2022-09-10 12:30:39] security.DEBUG: Calling Authentication entry point. [] []
