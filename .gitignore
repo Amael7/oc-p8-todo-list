@@ -1,8 +1,10 @@
 
 .DS_Store
 var/cache/dev/
-var/logs/dev.log
+var/sessions/dev/
+var/logs/
 var/sessions/dev/sess_i30a8c9g9igupj7kv4a9afatgn
 var/sessions/dev/sess_n5sbfsu17bnijp9stgicliopeq
 var/sessions/dev/sess_7jvtolmmssdb874kh838ffi4c3
 
+var/logs/dev.log
