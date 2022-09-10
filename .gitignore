@@ -1,3 +1,7 @@
 
 .DS_Store
 var/
+var/.DS_Store
+var/logs/dev.log
+var/.DS_Store
+var
