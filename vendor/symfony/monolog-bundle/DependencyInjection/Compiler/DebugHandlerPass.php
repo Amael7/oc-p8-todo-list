@@ -11,7 +11,6 @@
 
 namespace Symfony\Bundle\MonologBundle\DependencyInjection\Compiler;
 
-
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
@@ -50,7 +49,7 @@ class DebugHandlerPass implements CompilerPassInterface
             return;
         }
 
-        $debugHandler = new Definition('%monolog.handler.debug.class%', array(Logger::DEBUG, true));
+        $debugHandler = new Definition('Symfony\Bridge\Monolog\Handler\DebugHandler', array(Logger::DEBUG, true));
         $container->setDefinition('monolog.handler.debug', $debugHandler);
 
         foreach ($this->channelPass->getChannels() as $channel) {
