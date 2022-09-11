@@ -102,7 +102,9 @@
     <parameter key="mailer_user">null</parameter>
     <parameter key="mailer_password">null</parameter>
     <parameter key="secret">ThisTokenIsNotSoSecretChangeIt</parameter>
+    <parameter key="container.autowiring.strict_mode">true</parameter>
     <parameter key="locale">en</parameter>
+    <parameter key="cache_type">file_system</parameter>
     <parameter key="fragment.renderer.hinclude.global_template">null</parameter>
     <parameter key="fragment.path">/_fragment</parameter>
     <parameter key="kernel.secret">ThisTokenIsNotSoSecretChangeIt</parameter>
@@ -500,6 +502,25 @@
   </parameters>
   <services>
     <service id="service_container" class="Symfony\Component\DependencyInjection\ContainerInterface" public="true" synthetic="true"/>
+    <service id="AppBundle\AppBundle" class="AppBundle\AppBundle" public="false" autowire="true" autoconfigure="true"/>
+    <service id="AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
+    <service id="AppBundle\Controller\SecurityController" class="AppBundle\Controller\SecurityController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
+    <service id="AppBundle\Controller\TaskController" class="AppBundle\Controller\TaskController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
+    <service id="AppBundle\Controller\UserController" class="AppBundle\Controller\UserController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
+    <service id="AppBundle\Form\TaskType" class="AppBundle\Form\TaskType" public="false" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="AppBundle\Form\UserType" class="AppBundle\Form\UserType" public="false" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
       <argument type="service" id="kernel"/>
@@ -516,7 +537,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-50"/>
-      <argument type="service" id="service_locator.sr6ctxe"/>
+      <argument type="service" id="service_locator.dym8ez3"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-100"/>
@@ -776,7 +797,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>22Eougn+OF4ixvXtZIluoY</argument>
+      <argument>TcsJdMJqvPiywbkx9b+Las</argument>
       <argument>/Users/stephanemontoro/code/Amael7/OpenClassrooms/oc-p8-todo-list/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -786,7 +807,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>22Eougn+OF4ixvXtZIluoY</argument>
+      <argument>TcsJdMJqvPiywbkx9b+Las</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -931,7 +952,7 @@
       <argument type="service" id="form.resolved_type_factory"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id="service_locator.0blprly"/>
+      <argument type="service" id="service_locator.1lqxjju"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.http_foundation"/>
@@ -1802,15 +1823,6 @@
         <argument type="service" id="routing.loader.service"/>
       </call>
       <call method="addLoader">
-        <argument type="service" id="sensio_framework_extra.routing.loader.annot_class"/>
-      </call>
-      <call method="addLoader">
-        <argument type="service" id="sensio_framework_extra.routing.loader.annot_dir"/>
-      </call>
-      <call method="addLoader">
-        <argument type="service" id="sensio_framework_extra.routing.loader.annot_file"/>
-      </call>
-      <call method="addLoader">
         <argument type="service" id="routing.loader.annotation"/>
       </call>
       <call method="addLoader">
@@ -2586,12 +2598,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>631d2a13c51622.94678502</argument>
+      <argument>631d35c9ad11a9.47998261</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>631d2a13c51622.94678502</argument>
+      <argument>631d35c9ad11a9.47998261</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -3569,23 +3581,6 @@
       <tag name="container.hot_path"/>
       <argument type="service" id="annotations.cached_reader"/>
     </service>
-    <service id="sensio_framework_extra.routing.loader.annot_class" class="Sensio\Bundle\FrameworkExtraBundle\Routing\AnnotatedRouteControllerLoader" public="false">
-      <tag name="routing.loader"/>
-      <argument type="service" id="annotations.cached_reader"/>
-      <deprecated>The "%service_id%" service is deprecated since version 5.2</deprecated>
-    </service>
-    <service id="sensio_framework_extra.routing.loader.annot_dir" class="Symfony\Component\Routing\Loader\AnnotationDirectoryLoader" public="false">
-      <tag name="routing.loader"/>
-      <argument type="service" id="file_locator"/>
-      <argument type="service" id="sensio_framework_extra.routing.loader.annot_class"/>
-      <deprecated>The "%service_id%" service is deprecated since version 5.2</deprecated>
-    </service>
-    <service id="sensio_framework_extra.routing.loader.annot_file" class="Symfony\Component\Routing\Loader\AnnotationFileLoader" public="false">
-      <tag name="routing.loader"/>
-      <argument type="service" id="file_locator"/>
-      <argument type="service" id="sensio_framework_extra.routing.loader.annot_class"/>
-      <deprecated>The "%service_id%" service is deprecated since version 5.2</deprecated>
-    </service>
     <service id="sensio_framework_extra.converter.listener" class="Sensio\Bundle\FrameworkExtraBundle\EventListener\ParamConverterListener" public="false">
       <tag name="kernel.event_subscriber"/>
       <tag name="container.hot_path"/>
@@ -3783,7 +3778,43 @@
         <argument>security:check</argument>
       </call>
     </service>
-    <service id="service_locator.sr6ctxe" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" public="true" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\SecurityController" class="AppBundle\Controller\SecurityController" public="true" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.AppBundle\Controller\SecurityController" class="AppBundle\Controller\SecurityController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\TaskController" class="AppBundle\Controller\TaskController" public="true" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.AppBundle\Controller\TaskController" class="AppBundle\Controller\TaskController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\UserController" class="AppBundle\Controller\UserController" public="true" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.AppBundle\Controller\UserController" class="AppBundle\Controller\UserController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.AppBundle\Form\TaskType" class="AppBundle\Form\TaskType" public="false" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.AppBundle\Form\TaskType" class="AppBundle\Form\TaskType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.AppBundle\Form\UserType" class="AppBundle\Form\UserType" public="false" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.AppBundle\Form\UserType" class="AppBundle\Form\UserType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="service_locator.ouuwkjv" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id="service_locator.7rmt5bf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id="service_locator.jyppwca" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id="service_locator.rpq3szf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id="service_locator.d54.4d2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id="service_locator.brvmlq9" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id="service_locator.dym8ez3" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection"/>
     </service>
@@ -3894,9 +3925,11 @@
         <argument key="inline" type="service" id="fragment.renderer.inline"/>
       </argument>
     </service>
-    <service id="service_locator.0blprly" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.1lqxjju" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="AppBundle\Form\TaskType" type="service" id="AppBundle\Form\TaskType"/>
+        <argument key="AppBundle\Form\UserType" type="service" id="AppBundle\Form\UserType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="service" id="form.type.form"/>
@@ -4005,6 +4038,10 @@
       </call>
     </service>
     <service id="monolog.handler.null_internal" class="Monolog\Handler\NullHandler"/>
+    <service id="service_locator.sr6ctxe" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
     <service id="debug.validator.inner" class="Symfony\Component\Validator\Validator\ValidatorInterface" public="false">
       <factory service="validator.builder" method="getValidator"/>
     </service>
@@ -4085,7 +4122,7 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <argument>Fe0QwES074</argument>
       <argument>0</argument>
-      <argument>22Eougn+OF4ixvXtZIluoY</argument>
+      <argument>TcsJdMJqvPiywbkx9b+Las</argument>
       <argument>/Users/stephanemontoro/code/Amael7/OpenClassrooms/oc-p8-todo-list/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4093,7 +4130,7 @@
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <argument>Z4OUCWG63m</argument>
       <argument>0</argument>
-      <argument>22Eougn+OF4ixvXtZIluoY</argument>
+      <argument>TcsJdMJqvPiywbkx9b+Las</argument>
       <argument>/Users/stephanemontoro/code/Amael7/OpenClassrooms/oc-p8-todo-list/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4101,7 +4138,7 @@
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <argument>FSAvhOqzFE</argument>
       <argument>0</argument>
-      <argument>22Eougn+OF4ixvXtZIluoY</argument>
+      <argument>TcsJdMJqvPiywbkx9b+Las</argument>
       <argument>/Users/stephanemontoro/code/Amael7/OpenClassrooms/oc-p8-todo-list/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -4109,7 +4146,7 @@
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <argument>gaJaFkkt6i</argument>
       <argument>0</argument>
-      <argument>22Eougn+OF4ixvXtZIluoY</argument>
+      <argument>TcsJdMJqvPiywbkx9b+Las</argument>
       <argument>/Users/stephanemontoro/code/Amael7/OpenClassrooms/oc-p8-todo-list/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>

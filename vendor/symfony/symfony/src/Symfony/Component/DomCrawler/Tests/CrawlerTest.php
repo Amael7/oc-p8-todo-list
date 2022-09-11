@@ -310,9 +310,9 @@ EOF
 
     public function testEach()
     {
-        $data = $this->createTestCrawler()->filterXPath('//ul[1]/li')->each(function ($node, $i) {
-            return $i.'-'.$node->text();
-        });
+        // $data = $this->createTestCrawler()->filterXPath('//ul[1]/li')->each(function ($node, $i) {
+        //     return $i.'-'.$node->text();
+        // });
 
         $this->assertEquals(array('0-One', '1-Two', '2-Three'), $data, '->each() executes an anonymous function on each node of the list');
     }
