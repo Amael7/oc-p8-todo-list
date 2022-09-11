@@ -20,7 +20,7 @@
 namespace Doctrine\ORM\Tools;
 
 use Doctrine\ORM\Mapping\ClassMetadataInfo;
-use Doctrine\Common\Inflector\Inflector;
+use Doctrine\Inflector\InflectorFactory;
 use Doctrine\DBAL\Types\Type;
 use Symfony\Component\Yaml\Yaml;
 
@@ -301,7 +301,8 @@ class ConvertDoctrine1Schema
                 $relation['class'] = $name;
             }
             if ( ! isset($relation['local'])) {
-                $relation['local'] = Inflector::tableize($relation['class']);
+                $inflector = InflectorFactory::create()->build();
+                $relation['local'] = $inflector->tableize($relation['class']);
             }
             if ( ! isset($relation['foreign'])) {
                 $relation['foreign'] = 'id';

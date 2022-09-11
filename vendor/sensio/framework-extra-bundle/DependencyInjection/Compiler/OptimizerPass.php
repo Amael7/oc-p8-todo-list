@@ -15,20 +15,20 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 
 /**
+ * Optimizes the container by removing unneeded listeners.
+ *
  * @author Fabien Potencier <fabien@symfony.com>
  */
-class LegacyPass implements CompilerPassInterface
+class OptimizerPass implements CompilerPassInterface
 {
     public function process(ContainerBuilder $container)
     {
-        if (false === $container->hasDefinition('sensio_framework_extra.security.listener')) {
-            return;
+        if (!$container->hasDefinition('security.token_storage')) {
+            $container->removeDefinition('sensio_framework_extra.security.listener');
         }
 
-        $definition = $container->getDefinition('sensio_framework_extra.security.listener');
-
-        if ($container->hasDefinition('security.token_storage')) {
-            $definition->replaceArgument(0, null);
+        if (!$container->hasDefinition('twig')) {
+            $container->removeDefinition('sensio_framework_extra.view.listener');
         }
     }
 }
