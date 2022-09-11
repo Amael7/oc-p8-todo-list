@@ -1,7 +1,8 @@
 <?php
 namespace Doctrine\Bundle\DoctrineCacheBundle\DependencyInjection;
 
-use Doctrine\Common\Inflector\Inflector;
+use Doctrine\Inflector\Inflector;
+use Doctrine\Inflector\InflectorFactory;
 use Symfony\Component\DependencyInjection\Alias;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
@@ -12,6 +13,11 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
  */
 class CacheProviderLoader
 {
+    /**
+     * @var \Doctrine\Inflector\Inflector
+     */
+    protected $inflector;
+    
     /**
      * @param string                                                    $name
      * @param array                                                     $config
@@ -102,6 +108,16 @@ class CacheProviderLoader
         return class_exists($this->getDefinitionClass($type, $container));
     }
 
+    public function setInflector(Inflector $inflector) : void
+    {
+        $this->inflector = $inflector;
+    }
+
+    public function getInflector() : Inflector
+    {
+        return $this->Inflector;
+    }
+
     /**
      * @param string                                                    $type
      * @param \Symfony\Component\DependencyInjection\ContainerBuilder   $container
@@ -114,7 +130,9 @@ class CacheProviderLoader
             return $container->getParameter($this->getCustomDefinitionClassParameter($type));
         }
 
-        $name  = Inflector::classify($type) . 'Definition';
+        $this->inflector = InflectorFactory::create()->build();
+
+        $name  = $this->inflector->classify($type) . 'Definition';
         $class = sprintf('%s\Definition\%s', __NAMESPACE__, $name);
 
         return $class;

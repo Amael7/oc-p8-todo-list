@@ -20,7 +20,8 @@
 namespace Doctrine\ORM\Tools;
 
 use Doctrine\Common\Collections\Collection;
-use Doctrine\Common\Inflector\Inflector;
+use Doctrine\Inflector\Inflector;
+use Doctrine\Inflector\InflectorFactory;
 use Doctrine\DBAL\Types\Type;
 use Doctrine\ORM\Mapping\ClassMetadataInfo;
 use ReflectionClass;
@@ -337,6 +338,11 @@ public function __construct(<params>)
 ';
 
     /**
+     * @var \Doctrine\Inflector\Inflector
+     */
+    protected $inflector;
+
+    /**
      * Constructor.
      */
     public function __construct()
@@ -344,6 +350,7 @@ public function __construct(<params>)
         @trigger_error(self::class . ' is deprecated and will be removed in Doctrine ORM 3.0', E_USER_DEPRECATED);
 
         $this->annotationsPrefix = 'ORM\\';
+        $this->inflector = InflectorFactory::create()->build();
     }
 
     /**
@@ -591,6 +598,16 @@ public function __construct(<params>)
     public function setBackupExisting($bool)
     {
         $this->backupExisting = $bool;
+    }
+
+    public function setInflector(Inflector $inflector) : void
+    {
+        $this->inflector = $inflector;
+    }
+
+    public function getInflector() : Inflector
+    {
+        return $this->Inflector;
     }
 
     /**
@@ -1380,11 +1397,11 @@ public function __construct(<params>)
      */
     protected function generateEntityStubMethod(ClassMetadataInfo $metadata, $type, $fieldName, $typeHint = null, $defaultValue = null)
     {
-        $methodName = $type . Inflector::classify($fieldName);
-        $variableName = Inflector::camelize($fieldName);
+        $methodName = $type . $this->inflector->classify($fieldName);
+        $variableName = $this->inflector->camelize($fieldName);
         if (in_array($type, ["add", "remove"])) {
-            $methodName = Inflector::singularize($methodName);
-            $variableName = Inflector::singularize($variableName);
+            $methodName = $this->inflector->singularize($methodName);
+            $variableName = $this->inflector->singularize($variableName);
         }
 
         if ($this->hasMethod($methodName, $metadata)) {
