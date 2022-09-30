@@ -23,6 +23,7 @@ class ComposerStaticInit871ccabe63f7c894b64e58f046fac570
     public static $prefixLengthsPsr4 = array (
         'T' => 
         array (
+            'Twig\\Extra\\TwigExtraBundle\\' => 27,
             'Twig\\' => 5,
         ),
         'S' => 
@@ -124,6 +125,10 @@ class ComposerStaticInit871ccabe63f7c894b64e58f046fac570
     );
 
     public static $prefixDirsPsr4 = array (
+        'Twig\\Extra\\TwigExtraBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/extra-bundle',
+        ),
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
@@ -4803,6 +4808,13 @@ class ComposerStaticInit871ccabe63f7c894b64e58f046fac570
         'Twig\\Extension\\SandboxExtension' => __DIR__ . '/..' . '/twig/twig/src/Extension/SandboxExtension.php',
         'Twig\\Extension\\StagingExtension' => __DIR__ . '/..' . '/twig/twig/src/Extension/StagingExtension.php',
         'Twig\\Extension\\StringLoaderExtension' => __DIR__ . '/..' . '/twig/twig/src/Extension/StringLoaderExtension.php',
+        'Twig\\Extra\\TwigExtraBundle\\DependencyInjection\\Compiler\\MissingExtensionSuggestorPass' => __DIR__ . '/..' . '/twig/extra-bundle/DependencyInjection/Compiler/MissingExtensionSuggestorPass.php',
+        'Twig\\Extra\\TwigExtraBundle\\DependencyInjection\\Configuration' => __DIR__ . '/..' . '/twig/extra-bundle/DependencyInjection/Configuration.php',
+        'Twig\\Extra\\TwigExtraBundle\\DependencyInjection\\TwigExtraExtension' => __DIR__ . '/..' . '/twig/extra-bundle/DependencyInjection/TwigExtraExtension.php',
+        'Twig\\Extra\\TwigExtraBundle\\Extensions' => __DIR__ . '/..' . '/twig/extra-bundle/Extensions.php',
+        'Twig\\Extra\\TwigExtraBundle\\LeagueCommonMarkConverterFactory' => __DIR__ . '/..' . '/twig/extra-bundle/LeagueCommonMarkConverterFactory.php',
+        'Twig\\Extra\\TwigExtraBundle\\MissingExtensionSuggestor' => __DIR__ . '/..' . '/twig/extra-bundle/MissingExtensionSuggestor.php',
+        'Twig\\Extra\\TwigExtraBundle\\TwigExtraBundle' => __DIR__ . '/..' . '/twig/extra-bundle/TwigExtraBundle.php',
         'Twig\\FileExtensionEscapingStrategy' => __DIR__ . '/..' . '/twig/twig/src/FileExtensionEscapingStrategy.php',
         'Twig\\Lexer' => __DIR__ . '/..' . '/twig/twig/src/Lexer.php',
         'Twig\\Loader\\ArrayLoader' => __DIR__ . '/..' . '/twig/twig/src/Loader/ArrayLoader.php',

@@ -25,7 +25,8 @@
         "symfony/security-csrf": "5.4.*",
         "symfony/twig-bundle": "5.4.*",
         "symfony/validator": "5.4.*",
-        "symfony/yaml": "5.4.*"
+        "symfony/yaml": "5.4.*",
+        "twig/extra-bundle": "^3.4"
     },
     "config": {
         "allow-plugins": {

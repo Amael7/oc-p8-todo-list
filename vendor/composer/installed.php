@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '489bb9dbef69bb5903f8c82857634a3986a6b716',
+        'reference' => '95bab05b2d61eb8c7559754499c8fd3caaa40d61',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '489bb9dbef69bb5903f8c82857634a3986a6b716',
+            'reference' => '95bab05b2d61eb8c7559754499c8fd3caaa40d61',
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(
@@ -782,6 +782,15 @@
             'install_path' => __DIR__ . '/../symfony/yaml',
             'aliases' => array(),
             'reference' => '7a3aa21ac8ab1a96cc6de5bbcab4bc9fc943b18c',
+            'dev_requirement' => false,
+        ),
+        'twig/extra-bundle' => array(
+            'pretty_version' => 'v3.4.0',
+            'version' => '3.4.0.0',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../twig/extra-bundle',
+            'aliases' => array(),
+            'reference' => '2e58256b0e9fe52f30149347c0547e4633304765',
             'dev_requirement' => false,
         ),
         'twig/twig' => array(
