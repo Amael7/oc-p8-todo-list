@@ -1,15 +1,8 @@
 
 .DS_Store
 .env.local
-var/
-var/.DS_Store
-var/logs/dev.log
-var/.DS_Store
-var
-var/cache/dev/appDevDebugProjectContainer.php
-var/cache/dev/appDevDebugProjectContainer.xml
-var/cache/dev/appDevDebugProjectContainerDeprecations.log
-var/logs/dev.log
+/var/*
+/vendor/
 
 ###> symfony/phpunit-bridge ###
 .phpunit.result.cache
