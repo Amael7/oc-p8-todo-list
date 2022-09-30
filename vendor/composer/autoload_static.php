@@ -9,8 +9,8 @@ class ComposerStaticInit871ccabe63f7c894b64e58f046fac570
     public static $files = array (
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
-        '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'c2aad8997a98dfc4771bdbffea3d62b7' => __DIR__ . '/..' . '/laminas/laminas-code/polyfill/ReflectionEnumPolyfill.php',
@@ -47,10 +47,12 @@ class ComposerStaticInit871ccabe63f7c894b64e58f046fac570
             'Symfony\\Component\\EventDispatcher\\' => 34,
             'Symfony\\Component\\ErrorHandler\\' => 31,
             'Symfony\\Component\\Dotenv\\' => 25,
+            'Symfony\\Component\\DomCrawler\\' => 29,
             'Symfony\\Component\\DependencyInjection\\' => 38,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
             'Symfony\\Component\\Cache\\' => 24,
+            'Symfony\\Component\\BrowserKit\\' => 29,
             'Symfony\\Component\\Asset\\' => 24,
             'Symfony\\Bundle\\MakerBundle\\' => 27,
             'Symfony\\Bundle\\FrameworkBundle\\' => 31,
@@ -202,6 +204,10 @@ class ComposerStaticInit871ccabe63f7c894b64e58f046fac570
         array (
             0 => __DIR__ . '/..' . '/symfony/dotenv',
         ),
+        'Symfony\\Component\\DomCrawler\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/dom-crawler',
+        ),
         'Symfony\\Component\\DependencyInjection\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/dependency-injection',
@@ -217,6 +223,10 @@ class ComposerStaticInit871ccabe63f7c894b64e58f046fac570
         'Symfony\\Component\\Cache\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/cache',
+        ),
+        'Symfony\\Component\\BrowserKit\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/browser-kit',
         ),
         'Symfony\\Component\\Asset\\' => 
         array (
@@ -2749,6 +2759,16 @@ class ComposerStaticInit871ccabe63f7c894b64e58f046fac570
         'Symfony\\Component\\Asset\\VersionStrategy\\RemoteJsonManifestVersionStrategy' => __DIR__ . '/..' . '/symfony/asset/VersionStrategy/RemoteJsonManifestVersionStrategy.php',
         'Symfony\\Component\\Asset\\VersionStrategy\\StaticVersionStrategy' => __DIR__ . '/..' . '/symfony/asset/VersionStrategy/StaticVersionStrategy.php',
         'Symfony\\Component\\Asset\\VersionStrategy\\VersionStrategyInterface' => __DIR__ . '/..' . '/symfony/asset/VersionStrategy/VersionStrategyInterface.php',
+        'Symfony\\Component\\BrowserKit\\AbstractBrowser' => __DIR__ . '/..' . '/symfony/browser-kit/AbstractBrowser.php',
+        'Symfony\\Component\\BrowserKit\\Cookie' => __DIR__ . '/..' . '/symfony/browser-kit/Cookie.php',
+        'Symfony\\Component\\BrowserKit\\CookieJar' => __DIR__ . '/..' . '/symfony/browser-kit/CookieJar.php',
+        'Symfony\\Component\\BrowserKit\\Exception\\BadMethodCallException' => __DIR__ . '/..' . '/symfony/browser-kit/Exception/BadMethodCallException.php',
+        'Symfony\\Component\\BrowserKit\\History' => __DIR__ . '/..' . '/symfony/browser-kit/History.php',
+        'Symfony\\Component\\BrowserKit\\HttpBrowser' => __DIR__ . '/..' . '/symfony/browser-kit/HttpBrowser.php',
+        'Symfony\\Component\\BrowserKit\\Request' => __DIR__ . '/..' . '/symfony/browser-kit/Request.php',
+        'Symfony\\Component\\BrowserKit\\Response' => __DIR__ . '/..' . '/symfony/browser-kit/Response.php',
+        'Symfony\\Component\\BrowserKit\\Test\\Constraint\\BrowserCookieValueSame' => __DIR__ . '/..' . '/symfony/browser-kit/Test/Constraint/BrowserCookieValueSame.php',
+        'Symfony\\Component\\BrowserKit\\Test\\Constraint\\BrowserHasCookie' => __DIR__ . '/..' . '/symfony/browser-kit/Test/Constraint/BrowserHasCookie.php',
         'Symfony\\Component\\Cache\\Adapter\\AbstractAdapter' => __DIR__ . '/..' . '/symfony/cache/Adapter/AbstractAdapter.php',
         'Symfony\\Component\\Cache\\Adapter\\AbstractTagAwareAdapter' => __DIR__ . '/..' . '/symfony/cache/Adapter/AbstractTagAwareAdapter.php',
         'Symfony\\Component\\Cache\\Adapter\\AdapterInterface' => __DIR__ . '/..' . '/symfony/cache/Adapter/AdapterInterface.php',
@@ -3159,6 +3179,22 @@ class ComposerStaticInit871ccabe63f7c894b64e58f046fac570
         'Symfony\\Component\\DependencyInjection\\TaggedContainerInterface' => __DIR__ . '/..' . '/symfony/dependency-injection/TaggedContainerInterface.php',
         'Symfony\\Component\\DependencyInjection\\TypedReference' => __DIR__ . '/..' . '/symfony/dependency-injection/TypedReference.php',
         'Symfony\\Component\\DependencyInjection\\Variable' => __DIR__ . '/..' . '/symfony/dependency-injection/Variable.php',
+        'Symfony\\Component\\DomCrawler\\AbstractUriElement' => __DIR__ . '/..' . '/symfony/dom-crawler/AbstractUriElement.php',
+        'Symfony\\Component\\DomCrawler\\Crawler' => __DIR__ . '/..' . '/symfony/dom-crawler/Crawler.php',
+        'Symfony\\Component\\DomCrawler\\Field\\ChoiceFormField' => __DIR__ . '/..' . '/symfony/dom-crawler/Field/ChoiceFormField.php',
+        'Symfony\\Component\\DomCrawler\\Field\\FileFormField' => __DIR__ . '/..' . '/symfony/dom-crawler/Field/FileFormField.php',
+        'Symfony\\Component\\DomCrawler\\Field\\FormField' => __DIR__ . '/..' . '/symfony/dom-crawler/Field/FormField.php',
+        'Symfony\\Component\\DomCrawler\\Field\\InputFormField' => __DIR__ . '/..' . '/symfony/dom-crawler/Field/InputFormField.php',
+        'Symfony\\Component\\DomCrawler\\Field\\TextareaFormField' => __DIR__ . '/..' . '/symfony/dom-crawler/Field/TextareaFormField.php',
+        'Symfony\\Component\\DomCrawler\\Form' => __DIR__ . '/..' . '/symfony/dom-crawler/Form.php',
+        'Symfony\\Component\\DomCrawler\\FormFieldRegistry' => __DIR__ . '/..' . '/symfony/dom-crawler/FormFieldRegistry.php',
+        'Symfony\\Component\\DomCrawler\\Image' => __DIR__ . '/..' . '/symfony/dom-crawler/Image.php',
+        'Symfony\\Component\\DomCrawler\\Link' => __DIR__ . '/..' . '/symfony/dom-crawler/Link.php',
+        'Symfony\\Component\\DomCrawler\\Test\\Constraint\\CrawlerSelectorAttributeValueSame' => __DIR__ . '/..' . '/symfony/dom-crawler/Test/Constraint/CrawlerSelectorAttributeValueSame.php',
+        'Symfony\\Component\\DomCrawler\\Test\\Constraint\\CrawlerSelectorExists' => __DIR__ . '/..' . '/symfony/dom-crawler/Test/Constraint/CrawlerSelectorExists.php',
+        'Symfony\\Component\\DomCrawler\\Test\\Constraint\\CrawlerSelectorTextContains' => __DIR__ . '/..' . '/symfony/dom-crawler/Test/Constraint/CrawlerSelectorTextContains.php',
+        'Symfony\\Component\\DomCrawler\\Test\\Constraint\\CrawlerSelectorTextSame' => __DIR__ . '/..' . '/symfony/dom-crawler/Test/Constraint/CrawlerSelectorTextSame.php',
+        'Symfony\\Component\\DomCrawler\\UriResolver' => __DIR__ . '/..' . '/symfony/dom-crawler/UriResolver.php',
         'Symfony\\Component\\Dotenv\\Command\\DebugCommand' => __DIR__ . '/..' . '/symfony/dotenv/Command/DebugCommand.php',
         'Symfony\\Component\\Dotenv\\Command\\DotenvDumpCommand' => __DIR__ . '/..' . '/symfony/dotenv/Command/DotenvDumpCommand.php',
         'Symfony\\Component\\Dotenv\\Dotenv' => __DIR__ . '/..' . '/symfony/dotenv/Dotenv.php',
