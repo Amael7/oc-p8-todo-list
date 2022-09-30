@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'dde9aec46bea397acc106ca8e7d793c1af4c51d6',
+        'reference' => '1c562469a4ecf73cecb18aa6d2edd833bf6b84cf',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'dde9aec46bea397acc106ca8e7d793c1af4c51d6',
+            'reference' => '1c562469a4ecf73cecb18aa6d2edd833bf6b84cf',
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(
@@ -179,6 +179,15 @@
             'install_path' => __DIR__ . '/../doctrine/sql-formatter',
             'aliases' => array(),
             'reference' => '25a06c7bf4c6b8218f47928654252863ffc890a5',
+            'dev_requirement' => false,
+        ),
+        'fakerphp/faker' => array(
+            'pretty_version' => 'v1.20.0',
+            'version' => '1.20.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../fakerphp/faker',
+            'aliases' => array(),
+            'reference' => '37f751c67a5372d4e26353bd9384bc03744ec77b',
             'dev_requirement' => false,
         ),
         'friendsofphp/proxy-manager-lts' => array(
