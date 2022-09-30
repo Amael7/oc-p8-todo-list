@@ -51,6 +51,7 @@ class ComposerStaticInit871ccabe63f7c894b64e58f046fac570
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
             'Symfony\\Component\\Cache\\' => 24,
+            'Symfony\\Component\\Asset\\' => 24,
             'Symfony\\Bundle\\MakerBundle\\' => 27,
             'Symfony\\Bundle\\FrameworkBundle\\' => 31,
             'Symfony\\Bridge\\ProxyManager\\' => 28,
@@ -216,6 +217,10 @@ class ComposerStaticInit871ccabe63f7c894b64e58f046fac570
         'Symfony\\Component\\Cache\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/cache',
+        ),
+        'Symfony\\Component\\Asset\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/asset',
         ),
         'Symfony\\Bundle\\MakerBundle\\' => 
         array (
@@ -2726,6 +2731,24 @@ class ComposerStaticInit871ccabe63f7c894b64e58f046fac570
         'Symfony\\Bundle\\MakerBundle\\Util\\YamlManipulationFailedException' => __DIR__ . '/..' . '/symfony/maker-bundle/src/Util/YamlManipulationFailedException.php',
         'Symfony\\Bundle\\MakerBundle\\Util\\YamlSourceManipulator' => __DIR__ . '/..' . '/symfony/maker-bundle/src/Util/YamlSourceManipulator.php',
         'Symfony\\Bundle\\MakerBundle\\Validator' => __DIR__ . '/..' . '/symfony/maker-bundle/src/Validator.php',
+        'Symfony\\Component\\Asset\\Context\\ContextInterface' => __DIR__ . '/..' . '/symfony/asset/Context/ContextInterface.php',
+        'Symfony\\Component\\Asset\\Context\\NullContext' => __DIR__ . '/..' . '/symfony/asset/Context/NullContext.php',
+        'Symfony\\Component\\Asset\\Context\\RequestStackContext' => __DIR__ . '/..' . '/symfony/asset/Context/RequestStackContext.php',
+        'Symfony\\Component\\Asset\\Exception\\AssetNotFoundException' => __DIR__ . '/..' . '/symfony/asset/Exception/AssetNotFoundException.php',
+        'Symfony\\Component\\Asset\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/symfony/asset/Exception/ExceptionInterface.php',
+        'Symfony\\Component\\Asset\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/symfony/asset/Exception/InvalidArgumentException.php',
+        'Symfony\\Component\\Asset\\Exception\\LogicException' => __DIR__ . '/..' . '/symfony/asset/Exception/LogicException.php',
+        'Symfony\\Component\\Asset\\Exception\\RuntimeException' => __DIR__ . '/..' . '/symfony/asset/Exception/RuntimeException.php',
+        'Symfony\\Component\\Asset\\Package' => __DIR__ . '/..' . '/symfony/asset/Package.php',
+        'Symfony\\Component\\Asset\\PackageInterface' => __DIR__ . '/..' . '/symfony/asset/PackageInterface.php',
+        'Symfony\\Component\\Asset\\Packages' => __DIR__ . '/..' . '/symfony/asset/Packages.php',
+        'Symfony\\Component\\Asset\\PathPackage' => __DIR__ . '/..' . '/symfony/asset/PathPackage.php',
+        'Symfony\\Component\\Asset\\UrlPackage' => __DIR__ . '/..' . '/symfony/asset/UrlPackage.php',
+        'Symfony\\Component\\Asset\\VersionStrategy\\EmptyVersionStrategy' => __DIR__ . '/..' . '/symfony/asset/VersionStrategy/EmptyVersionStrategy.php',
+        'Symfony\\Component\\Asset\\VersionStrategy\\JsonManifestVersionStrategy' => __DIR__ . '/..' . '/symfony/asset/VersionStrategy/JsonManifestVersionStrategy.php',
+        'Symfony\\Component\\Asset\\VersionStrategy\\RemoteJsonManifestVersionStrategy' => __DIR__ . '/..' . '/symfony/asset/VersionStrategy/RemoteJsonManifestVersionStrategy.php',
+        'Symfony\\Component\\Asset\\VersionStrategy\\StaticVersionStrategy' => __DIR__ . '/..' . '/symfony/asset/VersionStrategy/StaticVersionStrategy.php',
+        'Symfony\\Component\\Asset\\VersionStrategy\\VersionStrategyInterface' => __DIR__ . '/..' . '/symfony/asset/VersionStrategy/VersionStrategyInterface.php',
         'Symfony\\Component\\Cache\\Adapter\\AbstractAdapter' => __DIR__ . '/..' . '/symfony/cache/Adapter/AbstractAdapter.php',
         'Symfony\\Component\\Cache\\Adapter\\AbstractTagAwareAdapter' => __DIR__ . '/..' . '/symfony/cache/Adapter/AbstractTagAwareAdapter.php',
         'Symfony\\Component\\Cache\\Adapter\\AdapterInterface' => __DIR__ . '/..' . '/symfony/cache/Adapter/AdapterInterface.php',
