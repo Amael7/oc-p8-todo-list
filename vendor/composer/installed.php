@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'db8399d36911345f4411f3bd5436a7d60d65de78',
+        'reference' => '0388bbe31dfb466a722e80d077d50c3bf7243b70',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'db8399d36911345f4411f3bd5436a7d60d65de78',
+            'reference' => '0388bbe31dfb466a722e80d077d50c3bf7243b70',
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(
@@ -773,6 +773,15 @@
             'install_path' => __DIR__ . '/../symfony/var-exporter',
             'aliases' => array(),
             'reference' => '8fc03ee75eeece3d9be1ef47d26d79bea1afb340',
+            'dev_requirement' => false,
+        ),
+        'symfony/web-profiler-bundle' => array(
+            'pretty_version' => 'v5.4.13',
+            'version' => '5.4.13.0',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../symfony/web-profiler-bundle',
+            'aliases' => array(),
+            'reference' => '6fefe0a7761a35b33c616e199c19f0c0d069e282',
             'dev_requirement' => false,
         ),
         'symfony/yaml' => array(
