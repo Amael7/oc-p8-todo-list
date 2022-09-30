@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'abd5b65cd29764409a7a31e3a0e560d3ba919821',
+        'reference' => '489bb9dbef69bb5903f8c82857634a3986a6b716',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'abd5b65cd29764409a7a31e3a0e560d3ba919821',
+            'reference' => '489bb9dbef69bb5903f8c82857634a3986a6b716',
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(
@@ -746,6 +746,15 @@
             'install_path' => __DIR__ . '/../symfony/twig-bundle',
             'aliases' => array(),
             'reference' => 'c992b4474c3a31f3c40a1ca593d213833f91b818',
+            'dev_requirement' => false,
+        ),
+        'symfony/validator' => array(
+            'pretty_version' => 'v5.4.13',
+            'version' => '5.4.13.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/validator',
+            'aliases' => array(),
+            'reference' => '8fba40ed3c21054cb9a543ccecd4f3175b6a011b',
             'dev_requirement' => false,
         ),
         'symfony/var-dumper' => array(
