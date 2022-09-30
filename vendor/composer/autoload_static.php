@@ -16,6 +16,7 @@ class ComposerStaticInit871ccabe63f7c894b64e58f046fac570
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        '92c8763cd6170fce6fcfe7e26b4e8c10' => __DIR__ . '/..' . '/symfony/phpunit-bridge/bootstrap.php',
         '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
         'c2aad8997a98dfc4771bdbffea3d62b7' => __DIR__ . '/..' . '/laminas/laminas-code/polyfill/ReflectionEnumPolyfill.php',
     );
@@ -79,6 +80,7 @@ class ComposerStaticInit871ccabe63f7c894b64e58f046fac570
             'Symfony\\Bundle\\FrameworkBundle\\' => 31,
             'Symfony\\Bridge\\Twig\\' => 20,
             'Symfony\\Bridge\\ProxyManager\\' => 28,
+            'Symfony\\Bridge\\PhpUnit\\' => 23,
             'Symfony\\Bridge\\Doctrine\\' => 24,
         ),
         'P' => 
@@ -337,6 +339,10 @@ class ComposerStaticInit871ccabe63f7c894b64e58f046fac570
         'Symfony\\Bridge\\ProxyManager\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/proxy-manager-bridge',
+        ),
+        'Symfony\\Bridge\\PhpUnit\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/phpunit-bridge',
         ),
         'Symfony\\Bridge\\Doctrine\\' => 
         array (
@@ -2657,6 +2663,31 @@ class ComposerStaticInit871ccabe63f7c894b64e58f046fac570
         'Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntityValidator' => __DIR__ . '/..' . '/symfony/doctrine-bridge/Validator/Constraints/UniqueEntityValidator.php',
         'Symfony\\Bridge\\Doctrine\\Validator\\DoctrineInitializer' => __DIR__ . '/..' . '/symfony/doctrine-bridge/Validator/DoctrineInitializer.php',
         'Symfony\\Bridge\\Doctrine\\Validator\\DoctrineLoader' => __DIR__ . '/..' . '/symfony/doctrine-bridge/Validator/DoctrineLoader.php',
+        'Symfony\\Bridge\\PhpUnit\\ClassExistsMock' => __DIR__ . '/..' . '/symfony/phpunit-bridge/ClassExistsMock.php',
+        'Symfony\\Bridge\\PhpUnit\\ClockMock' => __DIR__ . '/..' . '/symfony/phpunit-bridge/ClockMock.php',
+        'Symfony\\Bridge\\PhpUnit\\ConstraintTrait' => __DIR__ . '/..' . '/symfony/phpunit-bridge/ConstraintTrait.php',
+        'Symfony\\Bridge\\PhpUnit\\CoverageListener' => __DIR__ . '/..' . '/symfony/phpunit-bridge/CoverageListener.php',
+        'Symfony\\Bridge\\PhpUnit\\DeprecationErrorHandler' => __DIR__ . '/..' . '/symfony/phpunit-bridge/DeprecationErrorHandler.php',
+        'Symfony\\Bridge\\PhpUnit\\DeprecationErrorHandler\\Configuration' => __DIR__ . '/..' . '/symfony/phpunit-bridge/DeprecationErrorHandler/Configuration.php',
+        'Symfony\\Bridge\\PhpUnit\\DeprecationErrorHandler\\Deprecation' => __DIR__ . '/..' . '/symfony/phpunit-bridge/DeprecationErrorHandler/Deprecation.php',
+        'Symfony\\Bridge\\PhpUnit\\DeprecationErrorHandler\\DeprecationGroup' => __DIR__ . '/..' . '/symfony/phpunit-bridge/DeprecationErrorHandler/DeprecationGroup.php',
+        'Symfony\\Bridge\\PhpUnit\\DeprecationErrorHandler\\DeprecationNotice' => __DIR__ . '/..' . '/symfony/phpunit-bridge/DeprecationErrorHandler/DeprecationNotice.php',
+        'Symfony\\Bridge\\PhpUnit\\DnsMock' => __DIR__ . '/..' . '/symfony/phpunit-bridge/DnsMock.php',
+        'Symfony\\Bridge\\PhpUnit\\ExpectDeprecationTrait' => __DIR__ . '/..' . '/symfony/phpunit-bridge/ExpectDeprecationTrait.php',
+        'Symfony\\Bridge\\PhpUnit\\Legacy\\CommandForV7' => __DIR__ . '/..' . '/symfony/phpunit-bridge/Legacy/CommandForV7.php',
+        'Symfony\\Bridge\\PhpUnit\\Legacy\\CommandForV9' => __DIR__ . '/..' . '/symfony/phpunit-bridge/Legacy/CommandForV9.php',
+        'Symfony\\Bridge\\PhpUnit\\Legacy\\ConstraintLogicTrait' => __DIR__ . '/..' . '/symfony/phpunit-bridge/Legacy/ConstraintLogicTrait.php',
+        'Symfony\\Bridge\\PhpUnit\\Legacy\\ConstraintTraitForV7' => __DIR__ . '/..' . '/symfony/phpunit-bridge/Legacy/ConstraintTraitForV7.php',
+        'Symfony\\Bridge\\PhpUnit\\Legacy\\ConstraintTraitForV8' => __DIR__ . '/..' . '/symfony/phpunit-bridge/Legacy/ConstraintTraitForV8.php',
+        'Symfony\\Bridge\\PhpUnit\\Legacy\\ConstraintTraitForV9' => __DIR__ . '/..' . '/symfony/phpunit-bridge/Legacy/ConstraintTraitForV9.php',
+        'Symfony\\Bridge\\PhpUnit\\Legacy\\ExpectDeprecationTraitBeforeV8_4' => __DIR__ . '/..' . '/symfony/phpunit-bridge/Legacy/ExpectDeprecationTraitBeforeV8_4.php',
+        'Symfony\\Bridge\\PhpUnit\\Legacy\\ExpectDeprecationTraitForV8_4' => __DIR__ . '/..' . '/symfony/phpunit-bridge/Legacy/ExpectDeprecationTraitForV8_4.php',
+        'Symfony\\Bridge\\PhpUnit\\Legacy\\PolyfillAssertTrait' => __DIR__ . '/..' . '/symfony/phpunit-bridge/Legacy/PolyfillAssertTrait.php',
+        'Symfony\\Bridge\\PhpUnit\\Legacy\\PolyfillTestCaseTrait' => __DIR__ . '/..' . '/symfony/phpunit-bridge/Legacy/PolyfillTestCaseTrait.php',
+        'Symfony\\Bridge\\PhpUnit\\Legacy\\SymfonyTestsListenerForV7' => __DIR__ . '/..' . '/symfony/phpunit-bridge/Legacy/SymfonyTestsListenerForV7.php',
+        'Symfony\\Bridge\\PhpUnit\\Legacy\\SymfonyTestsListenerTrait' => __DIR__ . '/..' . '/symfony/phpunit-bridge/Legacy/SymfonyTestsListenerTrait.php',
+        'Symfony\\Bridge\\PhpUnit\\SymfonyTestsListener' => __DIR__ . '/..' . '/symfony/phpunit-bridge/SymfonyTestsListener.php',
+        'Symfony\\Bridge\\PhpUnit\\TextUI\\Command' => __DIR__ . '/..' . '/symfony/phpunit-bridge/TextUI/Command.php',
         'Symfony\\Bridge\\ProxyManager\\LazyProxy\\Instantiator\\LazyLoadingValueHolderFactory' => __DIR__ . '/..' . '/symfony/proxy-manager-bridge/LazyProxy/Instantiator/LazyLoadingValueHolderFactory.php',
         'Symfony\\Bridge\\ProxyManager\\LazyProxy\\Instantiator\\RuntimeInstantiator' => __DIR__ . '/..' . '/symfony/proxy-manager-bridge/LazyProxy/Instantiator/RuntimeInstantiator.php',
         'Symfony\\Bridge\\ProxyManager\\LazyProxy\\PhpDumper\\LazyLoadingValueHolderGenerator' => __DIR__ . '/..' . '/symfony/proxy-manager-bridge/LazyProxy/PhpDumper/LazyLoadingValueHolderGenerator.php',

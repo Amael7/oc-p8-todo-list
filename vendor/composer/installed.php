@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '0388bbe31dfb466a722e80d077d50c3bf7243b70',
+        'reference' => '40cfaf64b1ce5f63cfb4741b4aacc2c48894023d',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '0388bbe31dfb466a722e80d077d50c3bf7243b70',
+            'reference' => '40cfaf64b1ce5f63cfb4741b4aacc2c48894023d',
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(
@@ -516,6 +516,15 @@
             'aliases' => array(),
             'reference' => 'b0169ed8f09a4ae39eb119218ea1685079a9b179',
             'dev_requirement' => false,
+        ),
+        'symfony/phpunit-bridge' => array(
+            'pretty_version' => 'v6.1.3',
+            'version' => '6.1.3.0',
+            'type' => 'symfony-bridge',
+            'install_path' => __DIR__ . '/../symfony/phpunit-bridge',
+            'aliases' => array(),
+            'reference' => '75c2fa71d049c1f48e39d208c0cefba97e66335a',
+            'dev_requirement' => true,
         ),
         'symfony/polyfill-ctype' => array(
             'dev_requirement' => false,

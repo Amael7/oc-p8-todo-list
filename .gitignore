@@ -9,3 +9,8 @@ var/cache/dev/appDevDebugProjectContainer.php
 var/cache/dev/appDevDebugProjectContainer.xml
 var/cache/dev/appDevDebugProjectContainerDeprecations.log
 var/logs/dev.log
+
+###> symfony/phpunit-bridge ###
+.phpunit.result.cache
+/phpunit.xml
+###< symfony/phpunit-bridge ###
