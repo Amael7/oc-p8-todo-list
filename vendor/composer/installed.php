@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'f57c264271a645b9447c3076076df0ddb92591b2',
+        'reference' => 'd314a2d09839a90be3efd5513439237df32d1f57',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'f57c264271a645b9447c3076076df0ddb92591b2',
+            'reference' => 'd314a2d09839a90be3efd5513439237df32d1f57',
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(
@@ -482,12 +482,12 @@
             'dev_requirement' => false,
         ),
         'symfony/http-kernel' => array(
-            'pretty_version' => 'v5.4.12',
-            'version' => '5.4.12.0',
+            'pretty_version' => 'v5.4.13',
+            'version' => '5.4.13.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/http-kernel',
             'aliases' => array(),
-            'reference' => '37f660fa3bcd78fe4893ce23ebe934618ec099be',
+            'reference' => '4f25330c216b7bb178603b2e25fb7a9325015507',
             'dev_requirement' => false,
         ),
         'symfony/maker-bundle' => array(
