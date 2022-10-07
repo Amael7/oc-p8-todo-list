@@ -21,7 +21,7 @@ class TaskController extends AbstractController
         $this->taskManager = $taskManager;
     }
 
-    #[Route('/tasks', name: 'task_list')]
+    #[Route('/tasks', name: 'task_todo_list')]
     public function listAction(): Response
     {
         return $this->render('task/list.html.twig', [
@@ -87,7 +87,7 @@ class TaskController extends AbstractController
         return $this->redirectToRoute('task_todo_list');
     }
 
-    #[Route('/tasks/{id}/delete', name: 'delete')]
+    #[Route('/tasks/{id}/delete', name: 'task_delete')]
     public function deleteTaskAction(Task $task): Response
     {
         $this->taskManager->handleDeleteAction($task);
