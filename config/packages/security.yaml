@@ -1,4 +1,7 @@
 security:
+    encoders:
+        App\Entity\User: auto
+
     enable_authenticator_manager: true
     # https://symfony.com/doc/current/security.html#registering-the-user-hashing-passwords
     password_hashers:
@@ -10,23 +13,31 @@ security:
             entity:
                 class: App\Entity\User
                 property: username
+        doctrine:
+            entity:
+                class: App:User
+                property: username
         # used to reload user from session & other features (e.g. switch_user)
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
+            # anonymous: true
             lazy: true
+            pattern: ^/
             provider: users_in_memory
             form_login:
                 # "login" is the name of the route created previously
                 login_path: login
                 check_path: login
-        # https://symfony.com/doc/current/security.html#form-login
-        # secured_area:
-        #     form_login:
-        #         enable_csrf: true
-
+                # csrf_token_generator: security.csrf.token_manager
+                always_use_default_target_path:  true
+                default_target_path:  /
+                enable_csrf: true
+            logout: 
+                path: logout
+            # https://symfony.com/doc/current/security.html#form-login
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall
@@ -37,8 +48,11 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+        # - { path: ^/users, roles: ROLE_ADMIN }
+        # - { path: ^/, roles: ROLE_USER }
+    role_hierarchy:
+        ROLE_ADMIN:
+            - ROLE_USER
 
 when@test:
     security:
