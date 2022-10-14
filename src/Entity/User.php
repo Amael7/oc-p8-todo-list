@@ -8,6 +8,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[UniqueEntity(fields: ['email'], message: 'Il y a déjà un compte lié à cette email')]
@@ -20,6 +21,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?int $id = null;
 
     #[ORM\Column(length: 180, unique: true)]
+    #[Assert\NotBlank(message:"Vous devez saisir un nom d'utilisateur.")]
+    #[Assert\NotNull(message:"Le champ 'nom d'utilisateur' ne peut pas être null.")]
     private ?string $username = null;
 
     #[ORM\Column]
@@ -29,9 +32,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @var string The hashed password
      */
     #[ORM\Column]
+    #[Assert\NotBlank(message:"Vous devez saisir un password.")]
+    #[Assert\NotNull(message:"Le champ 'password' ne peut pas être null.")]
+    #[Assert\Length(min:"6", max:"48")]
     private ?string $password = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(message:"Vous devez saisir un email.")]
+    #[Assert\NotNull(message:"Le champ 'email' ne peut pas être null.")]
+    #[Assert\Email(message:"Le format de l'adresse utilisateur n'est pas correcte.")]
+    #[Assert\Length(min:"6", max:"48")]
     private ?string $email = null;
 
     public function __construct()
