@@ -68,7 +68,7 @@ class TaskManager
     public function handleCreateOrUpdate(Task $task = null)
     {
         if (null !== $task) {
-            // $task->setAuthor($this->security->getUser()); // set author need to be add to the Task entity
+            $task->setAuthor($this->security->getUser());
             $this->entityManager->persist($task);
         }
         $this->entityManager->flush();
