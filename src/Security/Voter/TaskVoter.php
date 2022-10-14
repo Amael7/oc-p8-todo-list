@@ -1,7 +1,6 @@
 <?php
-// https://symfony.com/doc/current/security/voters.html
 
-namespace App\Security;
+namespace App\Security\Voter;
 
 use App\Entity\Task;
 use App\Entity\User;
