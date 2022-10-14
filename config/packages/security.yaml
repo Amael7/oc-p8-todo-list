@@ -15,7 +15,7 @@ security:
                 property: username
         doctrine:
             entity:
-                class: App:User
+                class: App\Entity\User
                 property: username
         # used to reload user from session & other features (e.g. switch_user)
     firewalls:
