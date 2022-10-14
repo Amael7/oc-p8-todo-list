@@ -11,6 +11,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
+
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[UniqueEntity(fields: ['email'], message: 'Il y a déjà un compte lié à cette email')]
 #[UniqueEntity(fields: ['username'], message: 'Il y a déjà un compte lié à ce username')]
@@ -41,7 +42,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         minMessage: 'Le password doit contenir au minimum {{ limit }} caractères.',
         maxMessage: 'Le password doit contenir au maximum {{ limit }} caractères.',
     )]
-    private ?string $password = null;
+    private ?string $password;
 
     #[ORM\Column(length: 255)]
     #[Assert\NotBlank(message:"Vous devez saisir une adresse utilisateur.")]
@@ -54,7 +55,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function __construct()
     {
-        // $this->tasks = new ArrayCollection();
+        $this->tasks = new ArrayCollection();
         $this->roles = ['ROLE_USER'];
     }
 
