@@ -57,7 +57,7 @@ class UserController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->userManager->handleCreateOrUpdate($user, false, $password);
-            $this->addFlash('success', "L'utilisateur a bien été modifié");
+            $this->addFlash('success', "L'utilisateur à bien été modifié");
 
             return $this->redirectToRoute('user_list');
         }
