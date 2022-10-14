@@ -5,7 +5,7 @@ namespace App\DataFixtures;
 use App\Entity\Task;
 use App\DataFixtures\UserTestFixtures;
 use Doctrine\Bundle\FixturesBundle\Fixture;
-use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 
 class TaskTestFixtures extends Fixture implements DependentFixtureInterface
