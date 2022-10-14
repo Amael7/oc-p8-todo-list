@@ -7,5 +7,10 @@
 
             <button type="submit" class="btn btn-success pull-right">Modifier</button>
         {{ form_end(form) }}
+        {% if task.isIsDone == false %}
+            <a href="{{ path('task_todo_list') }}" class="btn btn-primary">Retour à la liste des tâches à faire</a>
+        {% else %}
+            <a href="{{ path('task_done_list') }}" class="btn btn-primary">Retour à la liste des tâches terminées</a>
+        {% endif %}
     </div>
 {% endblock %}
