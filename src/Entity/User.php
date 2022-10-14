@@ -35,14 +35,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     #[Assert\NotBlank(message:"Vous devez saisir un password.")]
     #[Assert\NotNull(message:"Le champ 'password' ne peut pas être null.")]
-    #[Assert\Length(min:"6", max:"48")]
+    #[Assert\Length(
+        min:"6", 
+        max:"40", 
+        minMessage: 'Le password doit contenir au minimum {{ limit }} caractères.',
+        maxMessage: 'Le password doit contenir au maximum {{ limit }} caractères.',
+    )]
     private ?string $password = null;
 
     #[ORM\Column(length: 255)]
-    #[Assert\NotBlank(message:"Vous devez saisir un email.")]
-    #[Assert\NotNull(message:"Le champ 'email' ne peut pas être null.")]
+    #[Assert\NotBlank(message:"Vous devez saisir une adresse utilisateur.")]
+    #[Assert\NotNull(message:"Le champ 'adresse utilisateur' ne peut pas être null.")]
     #[Assert\Email(message:"Le format de l'adresse utilisateur n'est pas correcte.")]
-    #[Assert\Length(min:"6", max:"48")]
     private ?string $email = null;
 
     #[ORM\OneToMany(mappedBy: 'author', targetEntity: Task::class, orphanRemoval: true)]
