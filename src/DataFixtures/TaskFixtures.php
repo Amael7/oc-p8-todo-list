@@ -34,6 +34,9 @@ class TaskFixtures extends Fixture implements DependentFixtureInterface
                 $task->setAuthor($this->getReference('user2'));
                 $task->setIsDone(true);
             }
+            if ($i == 6) {
+                $task->setAuthor($this->getReference('user2'));
+            }
             $manager->persist($task);
         }
 
