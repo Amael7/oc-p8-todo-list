@@ -5,7 +5,8 @@ namespace App\Manager;
 use App\Entity\User;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class UserManager
 {
@@ -24,11 +25,11 @@ class UserManager
      */
     private $encoder;
 
-    public function __construct(UserRepository $userRepository, EntityManagerInterface $entityManager, UserPasswordEncoderInterface $encoder)
+    public function __construct(UserRepository $userRepository, EntityManagerInterface $entityManager, UserPasswordHasherInterface $passwordHasher)
     {
         $this->userRepository = $userRepository;
         $this->entityManager = $entityManager;
-        $this->encoder = $encoder;
+        $this->passwordHasher = $passwordHasher;
     }
 
     /**
@@ -53,7 +54,7 @@ class UserManager
     public function handleCreateOrUpdate(User $user, bool $persist = true, string $password = null)
     {
         if (null !== $user->getPassword()) {
-            $password = $this->encoder->encodePassword($user, $user->getPassword());
+            $password = $this->passwordHasher->hashPassword($user, $user->getPassword());
         }
         $user->setPassword($password);
         if ($persist) {
