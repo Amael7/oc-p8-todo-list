@@ -33,5 +33,38 @@ class LoginControllerTest extends WebTestCase
     $this->assertSelectorTextSame('button', 'Se connecter');
   }
 
-  
+  /**
+   * Test login with valid credentials.
+   */
+  public function testLoginValidCredentials(): void
+  {
+    $crawler = $this->client->request(Request::METHOD_GET, $this->urlGenerator->generate('login'));
+
+    $form = $crawler->selectButton('Se connecter')->form();
+    $form['_username'] = 'user1';
+    $form['_password'] = 'password';
+    $this->client->submit($form);
+
+    $crawler = $this->client->followRedirect();
+    $this->assertSame(1, $crawler->filter('html:contains("Bienvenue sur Todo List, l\'application vous permettant de gérer l\'ensemble de vos tâches sans effort !")')->count());
+    $this->assertSelectorExists('a', 'Créer une nouvelle tâche');
+    $this->assertSelectorExists('a', 'Consulter la liste des tâches à faire');
+    $this->assertSelectorExists('a', 'Consulter la liste des tâches terminées');
+  }
+
+  /**
+   * Test login with invalid credentials.
+   */
+  public function testLoginInvalidCredentials(): void
+  {
+    $crawler = $this->client->request(Request::METHOD_GET, $this->urlGenerator->generate('login'));
+    $form = $crawler->selectButton('Se connecter')->form();
+    $form['_username'] = 'user77';
+    $form['_password'] = 'monument';
+    $this->client->submit($form);
+    $this->assertResponseStatusCodeSame(Response::HTTP_FOUND);
+    $crawler = $this->client->followRedirect();
+    $this->assertSelectorExists('.alert.alert-danger', 'Invalid credentials.');
+    $this->assertSelectorTextSame('button', 'Se connecter');
+  }
 }
