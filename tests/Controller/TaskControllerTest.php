@@ -2,7 +2,6 @@
 
 namespace App\tests\Controller;
 
-use App\Entity\Task;
 use App\Entity\User;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
