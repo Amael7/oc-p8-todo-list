@@ -96,7 +96,7 @@ class TaskControllerTest extends WebTestCase
     $this->assertSame(1, $crawler->filter('div.alert.alert-success')->count());
     $this->assertSame(1, $crawler->filter('h4 a:contains("New Task Test")')->count());
     $this->assertSame(1, $crawler->filter('p:contains("New content Test")')->count());
-    $this->assertSame(2, $crawler->filter('h6:contains("Auteur: user2")')->count());
+    $this->assertSame(0, $crawler->filter('h6:contains("Auteur: user2")')->count());
   }
 
   /**
@@ -193,7 +193,7 @@ class TaskControllerTest extends WebTestCase
   public function testDeleteActionByNotAuthor(): void
   {
     $this->client->loginUser($this->user);
-    $this->client->request(Request::METHOD_GET, $this->urlGenerator->generate("task_delete", ['id' => 47]));
+    $this->client->request(Request::METHOD_GET, $this->urlGenerator->generate("task_delete", ['id' => 7]));
     $this->assertResponseStatusCodeSame(Response::HTTP_UNAUTHORIZED);
   }
   

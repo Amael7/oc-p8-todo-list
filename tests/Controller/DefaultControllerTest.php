@@ -27,14 +27,12 @@ class DefaultControllerTest extends WebTestCase
   }
     
   /**
-   * Check homepage when not authenticated as login button
+   * Check homepage when not authenticated
    */
   public function testHomepageAsNotAuthenticated(): void
   {
     $crawler = $this->client->request(Request::METHOD_GET, $this->urlGenerator->generate('homepage'));
-    $this->assertResponseStatusCodeSame(Response::HTTP_OK);
-    $this->assertSame(1, $crawler->filter('html:contains("Bienvenue sur Todo List, l\'application vous permettant de gérer l\'ensemble de vos tâches sans effort !")')->count());
-    $this->assertSelectorExists('a', 'Se déconnecter');
+    $this->assertResponseStatusCodeSame(Response::HTTP_FOUND);
   }
 
   /**

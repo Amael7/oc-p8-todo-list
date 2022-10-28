@@ -10,6 +10,6 @@ class TaskRepositoryTest extends KernelTestCase
   public function testTaskFixturesNumber()
   {
     $tasks = static::getContainer()->get(TaskRepository::class)->count([]);
-    $this->assertSame(10, $tasks);
+    $this->assertSame(9, $tasks);
   }
 }

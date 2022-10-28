@@ -49,7 +49,7 @@ class UserTest extends KernelTestCase
   public function testInvalidUniqueEmail(): void
   {
       $user = $this->getEntity();
-      $user->setEmail('user1@hotmail.com');
+      $user->setEmail('user2@hotmail.com');
       $this->assertHasErrors($user, 1);
   }
 
