@@ -21,14 +21,14 @@ class TaskVoter extends Voter
         $this->security = $security;
     }
 
-    protected function supports($attribute, $subject)
+    protected function supports($attribute, $subject): bool
     {
         
         return \in_array($attribute, ['TASK_DELETE'], true)
             && $subject instanceof \App\Entity\Task;
     }
 
-    protected function voteOnAttribute($attribute, $subject, TokenInterface $token)
+    protected function voteOnAttribute($attribute, $subject, TokenInterface $token): bool
     {
         $user = $token->getUser();
         // if the user is anonymous, do not grant access
@@ -54,10 +54,8 @@ class TaskVoter extends Voter
     /**
      * @param Task $task
      * @param User $user
-     *
-     * @return bool
      */
-    private function canDelete(Task $task, User $user)
+    private function canDelete(Task $task, User $user): bool
     {
         if ($this->security->isGranted('ROLE_ADMIN') && (null === $task->getAuthor())) {
             return true;
