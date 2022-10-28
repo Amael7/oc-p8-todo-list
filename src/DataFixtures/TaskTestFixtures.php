@@ -19,10 +19,12 @@ class TaskTestFixtures extends Fixture implements DependentFixtureInterface
      */
     public function load(ObjectManager $manager)
     {
-        for ($i = 1; $i <= 5; ++$i) {
+        $faker = \Faker\Factory::create('fr_FR');
+
+        for ($i = 1; $i <= 10; ++$i) {
             $task = new Task();
-            $task->setTitle('title'.$i)
-                ->setContent('content'.$i);
+            $task->setTitle('tache '.$i)
+                ->setContent($faker->text(mt_rand(50, 150)));
             if ($i == 3) {
                 $task->setIsDone(true);
             }
@@ -30,6 +32,10 @@ class TaskTestFixtures extends Fixture implements DependentFixtureInterface
                 $task->setAuthor($this->getReference('user1'));
             }
             if ($i == 5) {
+                $task->setAuthor($this->getReference('user2'));
+                $task->setIsDone(true);
+            }
+            if ($i == 6) {
                 $task->setAuthor($this->getReference('user2'));
             }
             $manager->persist($task);
