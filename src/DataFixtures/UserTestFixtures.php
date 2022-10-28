@@ -28,7 +28,7 @@ class UserTestFixtures extends Fixture
      */
     public function load(ObjectManager $manager)
     {
-        for ($i = 1; $i <= 2; ++$i) {
+        for ($i = 1; $i <= 10; ++$i) {
             $user = new User();
             $user->setEmail('user'.$i.'@hotmail.com')
                 ->setUsername('user'.$i)
