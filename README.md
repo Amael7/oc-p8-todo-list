@@ -101,7 +101,7 @@ Procédure pour lancer les tests
 
 Un rapport de couverture de test avec un taux supérieur à 70% est déjà créer et accessible depuis la route :
     
-    - public/test-coverage/index.php
+        - public/test-coverage/index.php
 
 Commande pour obtenir le rapport de couverture de test :
   
