@@ -52,17 +52,25 @@ Installation
 
 3) Créer la base de données :
 
-a) Mettre à jour le fichier .env avec votre configuration de base de donnée.
+  a) Mettre à jour le fichier .env avec votre configuration de base de donnée.
+
   - DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name
-b) Creation de la base de données: 
+
+  b) Creation de la base de données: 
+
   - php bin/console doctrine:database:create
-c) Creation de la structure de la base de données: 
+
+  c) Creation de la structure de la base de données: 
+
   - php bin/console doctrine:schema:update --force
-d) Creation de données fictives: 
+
+  d) Creation de données fictives: 
+
   - php bin/console doctrine:fixtures:load --group=UserFixtures --group=TaskFixtures
  
 4) Ensuite vous pouvez lancez le serveur avec la commande:
-    - symfony serve
+
+  - symfony serve
   
 Pour lancer d'autre commande dans le terminal il suffit soit d'ouvrir un nouveau terminal soit de lancer la commande "symfony serve -d" à la place de "symfony serve".
 
