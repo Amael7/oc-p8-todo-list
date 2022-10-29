@@ -93,15 +93,27 @@ Procédure pour lancer les tests
 
 3) Créer les données fictives sur l'environnement de test :
   
-        - php bin/console doctrine:fixtures:load --group=UserTestFixtures --group=TaskTestFixtures --env=test
+        - php bin/console doctrine:fixtures:load --group=UserFixtures --group=TaskFixtures --env=test
 
 4) Utiliser la commande pour lancer les tests :
   
         - vendor/bin/phpunit
 
+Un rapport de couverture de test avec un taux supérieur à 70% est déjà créer et accessible depuis la route :
+    
+    - public/test-coverage/index.php
+
 Commande pour obtenir le rapport de couverture de test :
   
         - vendor/bin/phpunit --coverage-html public/test-coverage
+        
+Si vous souhaitez lancer un test specifique, vous pouvez choisirs quel fichier de test lancer avec la commande :
+
+        - php bin/phpunit --filter NomDuFichierTest
+        
+ Example : 
+   
+        - php bin/phpunit --filter DefaultControllerTest
    
 Comment Utiliser l'application
 ========
