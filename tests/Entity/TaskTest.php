@@ -19,7 +19,6 @@ class TaskTest extends KernelTestCase
     $task = new Task();
     $task->setTitle('title');
     $task->setContent('content');
-
     return $task;
   }
 

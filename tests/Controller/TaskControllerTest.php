@@ -170,7 +170,7 @@ class TaskControllerTest extends WebTestCase
     $this->assertResponseRedirects('/tasks');
     $crawler = $this->client->followRedirect();
     $this->assertSame(1, $crawler->filter('div.alert.alert-success')->count());
-    $this->assertSame(1, $crawler->filter('h4 a:contains("tache 7")')->count());
+    $this->assertSame(0, $crawler->filter('h4 a:contains("tache 7")')->count());
   }
 
   /**

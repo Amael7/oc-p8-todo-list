@@ -9,6 +9,6 @@ class UserRepositoryTest extends KernelTestCase
   public function testUserFixturesNumber()
   {
     $users = static::getContainer()->get(UserRepository::class)->count([]);
-    $this->assertSame(12, $users);
+    $this->assertSame(11, $users);
   }
 }

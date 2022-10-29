@@ -222,7 +222,7 @@ class UserControllerTest extends WebTestCase
    */
   public function testInvalidUserEdition(): void
   {
-    $id = $this->userRepository->findOneByEmail('user1Update@hotmail.com')->getId();
+    $id = $this->userRepository->findOneByEmail('user1@hotmail.com')->getId();
     $this->user = $this->userRepository->findOneByEmail('admin1@hotmail.com');
     $this->client->loginUser($this->user);
     $crawler = $this->client->request(Request::METHOD_GET, $this->urlGenerator->generate('user_edit', ['id' => $id]));
