@@ -45,20 +45,22 @@ Installation
 ========
 
 1) Git clone the project
-git@github.com:Amael7/oc-p8-todo-list.git
+- git@github.com:Amael7/oc-p8-todo-list.git
 
 2) Installez les librairies
-php bin/console composer install
+- php bin/console composer install
 
 3) Créer la base de données :
-  a) Mettre à jour le fichier .env avec votre configuration de base de donnée.
-    - DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name
-  b) Creation de la base de données: 
-    - php bin/console doctrine:database:create
-  c) Creation de la structure de la base de données: 
-    - php bin/console doctrine:schema:update --force
-  d) Creation de données fictives: 
-    - php bin/console doctrine:fixtures:load --group=UserFixtures --group=TaskFixtures
+
+a) Mettre à jour le fichier .env avec votre configuration de base de donnée.
+  - DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name
+b) Creation de la base de données: 
+  - php bin/console doctrine:database:create
+c) Creation de la structure de la base de données: 
+  - php bin/console doctrine:schema:update --force
+d) Creation de données fictives: 
+  - php bin/console doctrine:fixtures:load --group=UserFixtures --group=TaskFixtures
+ 
 4) Ensuite vous pouvez lancez le serveur avec la commande:
     - symfony serve
   
