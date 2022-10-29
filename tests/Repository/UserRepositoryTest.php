@@ -44,6 +44,7 @@ class UserRepositoryTest extends KernelTestCase
     $user->setPassword('password');
     $user->setEmail('test@gmail.com');
     $this->repository->save($user);
+    $this->entityManager->persist($user);
     $this->entityManager->flush($user);
 
     $user = $this->repository->findOneBy(['username' => 'testUser']);

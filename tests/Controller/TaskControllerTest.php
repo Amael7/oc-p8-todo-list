@@ -228,4 +228,15 @@ class TaskControllerTest extends WebTestCase
     $this->client->request(Request::METHOD_GET, $this->urlGenerator->generate('task_edit', ['id' => 163]));
     $this->assertResponseStatusCodeSame(Response::HTTP_NOT_FOUND);
   }
+
+  /**
+   * Test validity of homepage header link
+   */
+  public function testValidHomepageLink(): void
+  {
+    $crawler = $this->client->request(Request::METHOD_GET, $this->urlGenerator->generate('login'));
+    $link = $crawler->selectLink('To Do List app')->link();
+    $crawler = $this->client->click($link);
+    $this->assertResponseRedirects('http://localhost/login');
+  }
 }
