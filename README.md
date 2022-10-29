@@ -39,73 +39,82 @@ Environnement
   Version du projet Symfony : 5.4
 
   Il require :
-  - Php : >=7.2.5
+      - Php : >=7.2.5
 
 Installation 
 ========
 
-  1) Git clone the project
-  - git@github.com:Amael7/oc-p8-todo-list.git
+1) Git clone the project :
+  
+        - git@github.com:Amael7/oc-p8-todo-list.git
 
-  2) Installez les librairies
-  - php bin/console composer install
+2) Installez les librairies :
 
-  3) Créer la base de données :
+        - php bin/console composer install
 
-    a) Mettre à jour le fichier .env avec votre configuration de base de donnée.
+3) Création de la base de données :
 
-    - DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name
+a) Mettre à jour le fichier .env avec votre configuration de base de donnée.
 
-    b) Creation de la base de données: 
+        - DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name
 
-    - php bin/console doctrine:database:create
+b) Creation de la base de données: 
 
-    c) Creation de la structure de la base de données: 
+        - php bin/console doctrine:database:create
 
-    - php bin/console doctrine:schema:update --force
+c) Creation de la structure de la base de données: 
 
-    d) Creation de données fictives: 
+      - php bin/console doctrine:schema:update --force
 
-    - php bin/console doctrine:fixtures:load --group=UserFixtures --group=TaskFixtures
+d) Creation de données fictives: 
 
-  4) Ensuite vous pouvez lancez le serveur avec la commande:
+      - php bin/console doctrine:fixtures:load --group=UserFixtures --group=TaskFixtures
 
-    - symfony serve
+4) Ensuite vous pouvez lancez le serveur avec la commande:
+
+          - symfony serve
 
   Pour lancer d'autre commande dans le terminal il suffit soit d'ouvrir un nouveau terminal soit de lancer la commande "symfony serve -d" à la place de "symfony serve".
 
 Tests
 ========
 
-  Tout les tests unitaires et fonctionnels ont été implémenté avec PhP Unit.
+Tout les tests unitaires et fonctionnels ont été implémenté avec PhP Unit.
 
-  Procédure pour lancer les tests
+Procédure pour lancer les tests
 
-  1) Créer la base de données de test : 
-    - php bin/console doctrine:database:create --env=test  
+1) Créer la base de données de test : 
+  
+        - php bin/console doctrine:database:create --env=test  
 
-  2) Créer la structure de la base de données de test : 
-    - php bin/console doctrine:schema:create --env=test   
+2) Créer la structure de la base de données de test :
+   
+        - php bin/console doctrine:schema:create --env=test   
 
-  3) Créer les données fictives sur l'environnement de test :
-    - php bin/console doctrine:fixtures:load --group=UserTestFixtures --group=TaskTestFixtures --env=test
+3) Créer les données fictives sur l'environnement de test :
+  
+        - php bin/console doctrine:fixtures:load --group=UserTestFixtures --group=TaskTestFixtures --env=test
 
-  4) Utiliser la commande pour lancer les tests : 
-    - vendor/bin/phpunit
+4) Utiliser la commande pour lancer les tests :
+  
+        - vendor/bin/phpunit
 
-  Commande pour obtenir le rapport de couverture de test :
-    - vendor/bin/phpunit --coverage-html public/test-coverage
+Commande pour obtenir le rapport de couverture de test :
+  
+        - vendor/bin/phpunit --coverage-html public/test-coverage
    
 Comment Utiliser l'application
 ========
 
-  Afin de pouvoir utiliser l'application correctement, il existe plusieurs compte utilisateur généré.
+  Afin de pouvoir utiliser l'application correctement, il existe plusieurs comptes utilisateurs.
 
   Identifiant de connexion d'un compte **utilisateur classique** :
+  
     - Username: user1
     - password: password
 
   Identifiant de connexion d'un compte **Administrateur** :
+  
     - Username: admin1
     - password: password
 
