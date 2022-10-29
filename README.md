@@ -1,14 +1,14 @@
 ToDoList
 ========
 
-Projet #8 : Améliorez une application existante de ToDo & Co
+  Projet #8 : Améliorez une application existante de ToDo & Co
 
 Contexte
 ========
 
-Projet n°8 dans le cadre de ma formation OpenClassrooms : Développeur d'application PhP/Symfony. 
+  Projet n°8 dans le cadre de ma formation OpenClassrooms : Développeur d'application PhP/Symfony. 
 
-https://openclassrooms.com/projects/ameliorer-un-projet-existant-1
+  https://openclassrooms.com/projects/ameliorer-un-projet-existant-1
 
 Description du projet par OpenClassrooms
 ========
@@ -36,82 +36,82 @@ Spécification Technique
 Environnement
 ========
 
-Version du projet Symfony : 5.4
+  Version du projet Symfony : 5.4
 
-Il require :
-- Php : >=7.2.5
+  Il require :
+  - Php : >=7.2.5
 
 Installation 
 ========
 
-1) Git clone the project
-- git@github.com:Amael7/oc-p8-todo-list.git
+  1) Git clone the project
+  - git@github.com:Amael7/oc-p8-todo-list.git
 
-2) Installez les librairies
-- php bin/console composer install
+  2) Installez les librairies
+  - php bin/console composer install
 
-3) Créer la base de données :
+  3) Créer la base de données :
 
-  a) Mettre à jour le fichier .env avec votre configuration de base de donnée.
+    a) Mettre à jour le fichier .env avec votre configuration de base de donnée.
 
-  - DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name
+    - DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name
 
-  b) Creation de la base de données: 
+    b) Creation de la base de données: 
 
-  - php bin/console doctrine:database:create
+    - php bin/console doctrine:database:create
 
-  c) Creation de la structure de la base de données: 
+    c) Creation de la structure de la base de données: 
 
-  - php bin/console doctrine:schema:update --force
+    - php bin/console doctrine:schema:update --force
 
-  d) Creation de données fictives: 
+    d) Creation de données fictives: 
 
-  - php bin/console doctrine:fixtures:load --group=UserFixtures --group=TaskFixtures
- 
-4) Ensuite vous pouvez lancez le serveur avec la commande:
+    - php bin/console doctrine:fixtures:load --group=UserFixtures --group=TaskFixtures
 
-  - symfony serve
-  
-Pour lancer d'autre commande dans le terminal il suffit soit d'ouvrir un nouveau terminal soit de lancer la commande "symfony serve -d" à la place de "symfony serve".
+  4) Ensuite vous pouvez lancez le serveur avec la commande:
+
+    - symfony serve
+
+  Pour lancer d'autre commande dans le terminal il suffit soit d'ouvrir un nouveau terminal soit de lancer la commande "symfony serve -d" à la place de "symfony serve".
 
 Tests
 ========
 
-Tout les tests unitaires et fonctionnels ont été implémenté avec PhP Unit.
+  Tout les tests unitaires et fonctionnels ont été implémenté avec PhP Unit.
 
-Procédure pour lancer les tests
+  Procédure pour lancer les tests
 
-1) Créer la base de données de test : 
-  - php bin/console doctrine:database:create --env=test  
-  
-2) Créer la structure de la base de données de test : 
-  - php bin/console doctrine:schema:create --env=test   
-  
-3) Créer les données fictives sur l'environnement de test :
-  - php bin/console doctrine:fixtures:load --group=UserTestFixtures --group=TaskTestFixtures --env=test
-  
-4) Utiliser la commande pour lancer les tests : 
-  - vendor/bin/phpunit
-  
-Commande pour obtenir le rapport de couverture de test :
-  - vendor/bin/phpunit --coverage-html public/test-coverage
+  1) Créer la base de données de test : 
+    - php bin/console doctrine:database:create --env=test  
+
+  2) Créer la structure de la base de données de test : 
+    - php bin/console doctrine:schema:create --env=test   
+
+  3) Créer les données fictives sur l'environnement de test :
+    - php bin/console doctrine:fixtures:load --group=UserTestFixtures --group=TaskTestFixtures --env=test
+
+  4) Utiliser la commande pour lancer les tests : 
+    - vendor/bin/phpunit
+
+  Commande pour obtenir le rapport de couverture de test :
+    - vendor/bin/phpunit --coverage-html public/test-coverage
    
 Comment Utiliser l'application
 ========
 
-Afin de pouvoir utiliser l'application correctement, il existe plusieurs compte utilisateur généré.
+  Afin de pouvoir utiliser l'application correctement, il existe plusieurs compte utilisateur généré.
 
-Identifiant de connexion d'un compte **utilisateur classique** :
-  - Username: user1
-  - password: password
-  
-Identifiant de connexion d'un compte **Administrateur** :
-  - Username: admin1
-  - password: password
-   
+  Identifiant de connexion d'un compte **utilisateur classique** :
+    - Username: user1
+    - password: password
+
+  Identifiant de connexion d'un compte **Administrateur** :
+    - Username: admin1
+    - password: password
+
 Documentation
 ========
 
-- Diagrammes UML 
-- Guide d'authentification
-- Audit de qualité et de performance
+  - Diagrammes UML 
+  - Guide d'authentification
+  - Audit de qualité et de performance
