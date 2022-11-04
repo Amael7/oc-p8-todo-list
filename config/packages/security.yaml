@@ -2,7 +2,7 @@ security:
     encoders:
         App\Entity\User: auto
 
-    enable_authenticator_manager: false
+    enable_authenticator_manager: true
     # https://symfony.com/doc/current/security.html#registering-the-user-hashing-passwords
     password_hashers:
         Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
@@ -23,7 +23,7 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
-            anonymous: true
+            # anonymous: true
             lazy: true
             pattern: ^/
             provider: app_user_provider
@@ -31,10 +31,10 @@ security:
                 # "login" is the name of the route created previously
                 login_path: login
                 check_path: login
-                csrf_token_generator: security.csrf.token_manager
+                # csrf_token_generator: security.csrf.token_manager
                 always_use_default_target_path:  true
                 default_target_path:  /
-                # enable_csrf: true
+                enable_csrf: true
             logout: 
                 path: logout
             # https://symfony.com/doc/current/security.html#form-login
@@ -48,6 +48,8 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
+        # - { path: ^/users, roles: ROLE_ADMIN }
+        # - { path: ^/, roles: ROLE_USER }
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/users, roles: ROLE_ADMIN }
         - { path: ^/, roles: ROLE_USER }
