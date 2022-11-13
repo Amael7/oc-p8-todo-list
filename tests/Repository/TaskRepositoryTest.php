@@ -34,8 +34,7 @@ class TaskRepositoryTest extends KernelTestCase
     $task = new Task();
     $task->setTitle('title1');
     $task->setContent('Content1');
-    $this->repository->save($task);
-    $this->entityManager->flush($task);
+    $this->repository->save($task, true);
 
     $task = $this->repository->findOneBy(['title' => 'title1']);
     $this->assertSame('title1', $task->getTitle());
@@ -44,8 +43,7 @@ class TaskRepositoryTest extends KernelTestCase
   public function testRemove()
   {
     $task = $this->repository->findOneBy(['title' => 'tache 1']);
-    $this->repository->remove($task);
-    $this->entityManager->flush($task);
+    $this->repository->remove($task, true);
 
     $task = $this->repository->findOneBy(['title' => 'tache 1']);
     $this->assertSame(null, $task);

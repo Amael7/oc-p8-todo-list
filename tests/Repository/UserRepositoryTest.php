@@ -43,9 +43,7 @@ class UserRepositoryTest extends KernelTestCase
     $user->setUsername('testUser');
     $user->setPassword('password');
     $user->setEmail('test@gmail.com');
-    $this->repository->save($user);
-    $this->entityManager->persist($user);
-    $this->entityManager->flush($user);
+    $this->repository->save($user, true);
 
     $user = $this->repository->findOneBy(['username' => 'testUser']);
     $this->assertSame('testUser', $user->getUsername());
@@ -54,8 +52,7 @@ class UserRepositoryTest extends KernelTestCase
   public function testRemove()
   {
     $user = $this->repository->findOneBy(['username' => 'user1']);
-    $this->repository->remove($user);
-    $this->entityManager->flush($user);
+    $this->repository->remove($user, true);
 
     $user = $this->repository->findOneBy(['username' => 'user1']);
     $this->assertSame(null, $user);
