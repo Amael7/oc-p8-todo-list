@@ -50,7 +50,7 @@ Installation
 
 2) Installez les librairies :
 
-        - php bin/console composer install
+        - composer install
 
 3) Création de la base de données :
 
