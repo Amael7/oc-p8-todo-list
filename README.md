@@ -129,6 +129,12 @@ Comment Utiliser l'application
   
     - Username: admin1
     - password: password
+    
+    
+Contribution
+========
+
+Veuillez consulter le fichier contribution.mb
 
 Documentation
 ========
